@@ -30,7 +30,7 @@ const webUserController = ({
         webuser.save()
         res.json(webuser)
     },
-    signin:(req,res)=>{
+    login:(req,res)=>{
         const signIn = Webuser.find({
             email:req.body.email,
             password:req.body.password

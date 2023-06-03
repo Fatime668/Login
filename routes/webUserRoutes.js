@@ -19,7 +19,7 @@ router.post(
     router.post('/signin',
     [body("email").isEmail().withMessage("@ characater is should be").notEmpty().withMessage("Email is not defined")],
     [body("password").notEmpty().withMessage("The password field is required")],
-    webUserController.signin)
+    webUserController.login)
 router.delete('/:id',webUserController.delete)
 router.put('/:id',webUserController.update)
 
